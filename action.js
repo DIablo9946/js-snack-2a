@@ -8,17 +8,21 @@
 var listanom = ["Paolo", "Marco", "Filippo", "Simone", "Giuseppe"];
 var listacogn = ["Paretti", "Chiusi", "Gratti", "DiLeo", "Caprese"];
 
-var falsalista = [];
+genfalsename(listanom, listacogn);
 
-for (var i = 0; i < 8; i++) {
- falnom = Math.floor(Math.random() * listanom.length);
- falcogn = Math.floor(Math.random() * listacogn.length);
+function genfalsename(namear, cognar) {
 
- var nuovoNom = listanom[falnom];
-     nuovoNom += " " + listacogn[falcogn];
+  var falsalista = [];
 
-     falsalista.push(nuovoNom);
+  for (var i = 0; i < 8; i++) {
+   falnom = Math.floor(Math.random() * namear.length);
+   falcogn = Math.floor(Math.random() * cognar.length);
+
+   var nuovoNom = namear[falnom];
+       nuovoNom += " " + cognar[falcogn];
+
+       falsalista.push(nuovoNom);
+  }
+
+  console.log(falsalista);
 }
-
-
-console.log(falsalista);
