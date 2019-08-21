@@ -10,13 +10,15 @@ var listacogn = ["Paretti", "Chiusi", "Gratti", "DiLeo", "Caprese"];
 
 var falsalista = [];
 
-var falnom = Math.floor(Math.random() * listanom.length);
-var falcogn = Math.floor(Math.random() * listacogn.length);
+for (var i = 0; i < 8; i++) {
+ falnom = Math.floor(Math.random() * listanom.length);
+ falcogn = Math.floor(Math.random() * listacogn.length);
 
-console.log(listanom[falnom]);
-console.log(listacogn[falcogn]);
+ var nuovoNom = listanom[falnom];
+     nuovoNom += " " + listacogn[falcogn];
 
-falsalista.push(listanom[falnom]);
-falsalista.push(listacogn[falcogn]);
+     falsalista.push(nuovoNom);
+}
+
 
 console.log(falsalista);
